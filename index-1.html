@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTClean Detailing - Premium Car Detailing Services in Ottawa</title>
+    <meta name="description" content="HTClean Detailing offers premium car detailing services in Ottawa. From basic washes to full detailing, our expert team ensures your car looks its absolute best. Book an appointment today!">
+    <meta name="keywords" content="car detailing, Ottawa car wash, professional detailing, auto detailing, car care services">
+    <link rel="stylesheet" href="style.css">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3498db">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS (Animate On Scroll) Library for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Swiper.js for Carousels -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "HTClean Detailing",
+      "image": "https://www.htcleandetailing.com/images/logo.JPG",
+      "@id": "",
+      "url": "https://www.htcleandetailing.com/",
+      "telephone": "+13432972006",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main St",
+        "addressLocality": "Ottawa",
+        "addressRegion": "ON",
+        "postalCode": "K1A 0B1",
+        "addressCountry": "CA"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/htcleandetailing",
+        "https://www.facebook.com/htcleandetailing",
+        "https://twitter.com/htcleandetailing"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">HTClean Detailing</div>
+        <nav>
+            <ul>
+                <li><a href="#about" aria-label="About Us">About Us</a></li>
+                <li><a href="#work" aria-label="Our Work">Our Work</a></li>
+                <li><a href="#pricing" aria-label="Services">Services</a></li>
+                <li><a href="#contact" aria-label="Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Your Car Deserves the Best</h1>
+            <p>Premium car detailing services tailored to perfection. Book an appointment today!</p>
+            <a href="#contact" class="cta">Get in Touch</a>
+            <a href="https://cal.com/htcleaningdetails" class="book-now-btn" target="_blank" rel="noopener noreferrer">Book Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/cleancar.jpg" alt="Clean Car" loading="lazy">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    At HTClean Detailing, we pride ourselves on delivering top-notch car cleaning services. From basic washes to full detailing, we handle every car with care and precision. Our team is dedicated to making your car look its absolute best!
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="images/logo.JPG" alt="HTClean Logo" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="work" data-aos="fade-up">
+        <h2>Our Work</h2>
+        <!-- Existing Slider -->
+        <div class="slider">
+            <div class="slider-images">
+                <img src="images/clean1.jpg" alt="Car Detailing Work 1" loading="lazy">
+                <img src="images/after1.jpg" alt="Car Detailing Work 2" loading="lazy">
+                <img src="images/clean2.jpg" alt="Car Detailing Work 3" loading="lazy">
+                <img src="images/after2.jpg" alt="Car Detailing Work 4" loading="lazy">
+                <img src="images/clean3.jpg" alt="Car Detailing Work 5" loading="lazy">
+                <img src="images/after3.jpg" alt="Car Detailing Work 6" loading="lazy">
+                <img src="images/clean4.jpg" alt="Car Detailing Work 7" loading="lazy">
+                <img src="images/after4.jpg" alt="Car Detailing Work 8" loading="lazy">
+                <img src="images/clean5.jpg" alt="Car Detailing Work 9" loading="lazy">
+                <img src="images/after5.jpg" alt="Car Detailing Work 10" loading="lazy">
+                <img src="images/after6.jpg" alt="Car Detailing Work 11" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous Slide">&lt;</button>
+            <button class="next" aria-label="Next Slide">&gt;</button>
+        </div>
+
+        <!-- Interactive Before/After Slider -->
+        <div class="before-after-container" data-aos="fade-up">
+            <h3>Before & After</h3>
+            <div class="before-after-slider">
+                <div class="before-after-images">
+                    <img src="images/before1.jpg" alt="Before Detailing" class="before-image" loading="lazy">
+                    <img src="images/after1.jpg" alt="After Detailing" class="after-image" loading="lazy">
+                </div>
+                <div class="slider-handle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Recommendation Quiz Section -->
+    <section id="service-quiz" data-aos="fade-up">
+        <h2>Find the Best Detailing Service for Your Vehicle</h2>
+        <div class="quiz-container">
+            <form id="quiz-form">
+                <!-- Question 1 -->
+                <div class="quiz-question" data-question="1">
+                    <p>1. What type of vehicle do you have?</p>
+                    <label><input type="radio" name="vehicle-type" value="Sedan" required> Sedan</label>
+                    <label><input type="radio" name="vehicle-type" value="SUV"> SUV</label>
+                    <label><input type="radio" name="vehicle-type" value="Truck"> Truck</label>
+                    <label><input type="radio" name="vehicle-type" value="Other"> Other</label>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="quiz-question" data-question="2">
+                    <p>2. What areas would you like to focus on?</p>
+                    <label><input type="checkbox" name="focus-area" value="Exterior"> Exterior</label>
+                    <label><input type="checkbox" name="focus-area" value="Interior"> Interior</label>
+                    <label><input type="checkbox" name="focus-area" value="Full-Service"> Full Service</label>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="quiz-question" data-question="3">
+                    <p>3. Do you have any specific concerns?</p>
+                    <label><input type="checkbox" name="concerns" value="Scratches"> Scratches</label>
+                    <label><input type="checkbox" name="concerns" value="Odors"> Odors</label>
+                    <label><input type="checkbox" name="concerns" value="Stains"> Stains</label>
+                    <label><input type="checkbox" name="concerns" value="Waxing"> Waxing</label>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="quiz-question" data-question="4">
+                    <p>4. How often do you get your vehicle detailed?</p>
+                    <label><input type="radio" name="frequency" value="First-Time" required> First-Time</label>
+                    <label><input type="radio" name="frequency" value="Monthly"> Monthly</label>
+                    <label><input type="radio" name="frequency" value="Quarterly"> Quarterly</label>
+                    <label><input type="radio" name="frequency" value="Annually"> Annually</label>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="quiz-submit">Get Recommendation</button>
+            </form>
+            
+            <!-- Result Display -->
+            <div id="quiz-result" class="quiz-result"></div>
+        </div>
+    </section>
+   
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" data-aos="fade-up">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-trophy"></i>
+                <h3>Expert Team</h3>
+                <p>Highly trained professionals delivering quality service.</p>
+            </div>
+            <div class="feature" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-car"></i>
+                <h3>State-of-the-Art Tools</h3>
+                <p>Using the latest equipment to ensure perfection.</p>
+            </div>
+            <div class="feature" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-heart"></i>
+                <h3>Customer Focused</h3>
+                <p>Your satisfaction is our top priority.</p>
+            </div>
+            <div class="feature" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Trusted Guarantee</h3>
+                <p>We stand by our work with a satisfaction guarantee.</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Pricing Section -->
+    <section id="pricing" class="pricing" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <div class="pricing-grid">
+            <div class="pricing-item">
+                <h4>Interior Detailing</h4>
+                <ul>
+                    <li>Vacuuming</li>
+                    <li>Surface cleaning</li>
+                    <li>Odor elimination</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h4>Exterior Detail</h4>
+                <ul>
+                    <li>Full Exterior Soap Wash</li>
+                    <li>Wheel Cleaning</li>
+                    <li>Tire Shine</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h4>Exterior Polish</h4>
+                <ul>
+                    <li>Paint protection</li>
+                    <li>Scratch removal</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h4>Wax Application</h4>
+                <ul>
+                    <li>Full Car Wax Application </li>
+                    <li>Up to 5 years guarentee </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Pricing Calculator Section -->
+    <section id="pricing-calculator" class="pricing-calculator-section" data-aos="fade-up">
+        <h3>Estimate Your Service</h3>
+        <form id="pricing-form">
+            <div class="calculator-form-group">
+                <label for="service-interior">Interior Detailing ($130)</label>
+                <input type="checkbox" id="service-interior" name="services" value="130">
+            </div>
+            <div class="calculator-form-group">
+                <label for="service-exterior">Exterior Detailing ($60)</label>
+                <input type="checkbox" id="service-exterior" name="services" value="60">
+            </div>
+            <div class="calculator-form-group">
+                <label for="service-full">Exterior Polish ($100)</label>
+                <input type="checkbox" id="service-full" name="services" value="100">
+            </div>
+            <div class="calculator-form-group">
+                <label for="service-wash">Wax Application ($100)</label>
+                <input type="checkbox" id="service-wash" name="services" value="100">
+            </div>
+            <div class="calculator-form-group">
+                <label for="service-additional">Additional Services ($10 each)</label>
+                <input type="number" id="service-additional" name="additional" min="0" max="10" value="0">
+            </div>
+            <div class="calculator-result">
+                <p>Total Estimate: $<span id="total-price">0</span></p>
+                <p class="pricing-disclaimer">*Pricing is subject to change based on vehicle condition and selected services.</p>
+            </div>
+        </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" data-aos="fade-up">
+        <h2>What Our Customers Say</h2>
+        <div class="swiper-container testimonials-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial">
+                        <p>"HTClean Detailing transformed my car! The attention to detail is unparalleled."</p>
+                        <h4>- Sarah L.</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial">
+                        <p>"Professional and efficient service. Highly recommend HTClean for all your car detailing needs."</p>
+                        <h4>- Michael B.</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial">
+                        <p>"My car looks brand new after their full-service detailing. Exceptional quality!"</p>
+                        <h4>- Jessica M.</h4>
+                    </div>
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What services do you offer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer a comprehensive range of car detailing services including Basic Wash, Interior Detailing, Exterior Polish, Full Service, and additional add-ons to customize your detailing experience.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>How long does a detailing service take?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>The duration varies based on the service selected. A Basic Wash typically takes about 30 minutes, while a Full Service detailing can take up to 3 hours. Please refer to our <a href="#pricing">Services</a> section for more details.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Do I need to make an appointment?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we recommend booking an appointment to ensure availability and to provide you with the best possible service experience. You can book an appointment through our <a href="#contact">Contact</a> section or directly via our online booking system.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What areas do you serve?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We proudly serve the Ottawa area and its surrounding regions. If you're unsure whether you're within our service area, please contact us, and we'll be happy to assist you.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What payment methods do you accept?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept various payment methods including cash, major credit/debit cards (Visa, MasterCard, American Express), and digital wallets like PayPal and Apple Pay for your convenience.</p>
+                </div>
+            </div>
+            <!-- Add more FAQ items as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> +1 (343) 297-2006</p>
+                <p><i class="fas fa-envelope"></i> htcleandetailers@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Ottawa, ON</p>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/htcleandetailing" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/htcleandetailing" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/htcleandetailing" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contact-form">
+                    <input type="text" name="user_name" placeholder="Your Name" required>
+                    <input type="email" name="user_email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HTClean Detailing. All rights reserved.</p>
+        <p>Made with ❤️ in Ottawa</p>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <!-- AOS Library for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Swiper.js for Carousels -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- A-Frame Library for Virtual Tour -->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- Calendly Widget Script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
