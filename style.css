@@ -108,6 +108,12 @@ header nav ul li a:hover {
 }
 
 /* Responsive Header */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 40px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -123,6 +129,23 @@ header nav ul li a:hover {
 
     header nav ul li a {
         font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: left;
     }
 }
 
@@ -263,6 +286,36 @@ header nav ul li a:hover {
     }
 }
 
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 15px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero .cta {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .book-now-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        margin-left: 10px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
 /* =========================
    5. About Us Section
 ========================= */
@@ -331,8 +384,46 @@ header nav ul li a:hover {
     box-shadow: var(--box-shadow-hover);
 }
 
+/* Responsive About Us */
+@media (max-width: 768px) {
+    #about {
+        padding: 80px 30px;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-text,
+    .about-image {
+        min-width: 100%;
+    }
+
+    .about-image img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 60px 20px;
+    }
+
+    .about-content {
+        gap: 20px;
+    }
+
+    .about-text p {
+        font-size: 1em;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+}
+
 /* =========================
-    Why Choose Us Section
+    6. Why Choose Us Section
 ========================= */
 
 /* Container for the Why Choose Us Section */
@@ -385,7 +476,6 @@ header nav ul li a:hover {
     color: var(--white);
 }
 
-/* Glow Effect on Hover */
 .feature::after {
     content: '';
     position: absolute;
@@ -404,7 +494,6 @@ header nav ul li a:hover {
     opacity: 1;
 }
 
-/* Icon Styling */
 .feature i {
     font-size: 3.5em;
     color: var(--white);
@@ -414,13 +503,11 @@ header nav ul li a:hover {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Icon Animation on Hover */
 .feature:hover i {
     transform: rotate(15deg) scale(1.1);
     color: #ffffff; /* Maintains white color on hover */
 }
 
-/* Feature Title */
 .feature h3 {
     font-size: 1.8em;
     color: var(--white);
@@ -431,7 +518,6 @@ header nav ul li a:hover {
     z-index: 1;
 }
 
-/* Feature Description */
 .feature p {
     font-size: 1.1em;
     color: rgba(255, 255, 255, 0.9);
@@ -439,7 +525,6 @@ header nav ul li a:hover {
     z-index: 1;
 }
 
-/* Hover Effects for Feature Box */
 .feature:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: var(--box-shadow-hover);
@@ -448,6 +533,14 @@ header nav ul li a:hover {
 
 /* Responsive Adjustments for Tablets */
 @media (max-width: 768px) {
+    .why-choose-us {
+        padding: 80px 30px;
+    }
+
+    .features {
+        gap: 20px;
+    }
+
     .feature {
         padding: 35px 20px;
     }
@@ -465,8 +558,11 @@ header nav ul li a:hover {
     }
 }
 
-/* Responsive Adjustments for Mobile Devices */
 @media (max-width: 480px) {
+    .why-choose-us {
+        padding: 60px 20px;
+    }
+
     .feature {
         padding: 30px 15px;
     }
@@ -484,9 +580,8 @@ header nav ul li a:hover {
     }
 }
 
-
 /* =========================
-   8. Our Work Section
+   7. Our Work Section
 ========================= */
 #work {
     background-color: var(--light-gray);
@@ -642,10 +737,51 @@ header nav ul li a:hover {
     background-color: var(--primary-dark);
 }
 
-/* Responsive Before/After Slider */
+/* Responsive Our Work Section */
+@media (max-width: 1024px) {
+    #work {
+        padding: 80px 30px;
+    }
+
+    .slider {
+        max-width: 700px;
+    }
+
+    .before-after-slider {
+        height: 400px;
+    }
+}
+
 @media (max-width: 768px) {
+    #work {
+        padding: 60px 20px;
+    }
+
+    .slider {
+        max-width: 600px;
+    }
+
     .before-after-slider {
         height: 300px;
+    }
+
+    .slider button {
+        padding: 10px 14px;
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    #work {
+        padding: 40px 15px;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+
+    .before-after-slider {
+        height: 200px;
     }
 
     .slider-handle::before {
@@ -658,16 +794,9 @@ header nav ul li a:hover {
     }
 }
 
-/* Focus State for Accessibility */
-.slider-handle:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 4px;
-}
-
 /* =========================
-     Our Services (Pricing) Section
+   8. Our Services (Pricing) Section
 ========================= */
-
 /* Container for the Our Services Section */
 .pricing {
     background-color: var(--white);
@@ -718,7 +847,6 @@ header nav ul li a:hover {
     transition: transform var(--transition-speed), box-shadow var(--transition-speed), background 0.3s ease;
 }
 
-/* Glow Effect on Hover */
 .pricing-item::after {
     content: '';
     position: absolute;
@@ -737,7 +865,6 @@ header nav ul li a:hover {
     opacity: 1;
 }
 
-/* Feature Title Styling */
 .pricing-item h4 {
     font-size: 1.8em;
     color: var(--white);
@@ -748,7 +875,6 @@ header nav ul li a:hover {
     z-index: 1;
 }
 
-/* Pricing Description List */
 .pricing-item ul {
     margin-top: 15px;
     text-align: left;
@@ -758,7 +884,6 @@ header nav ul li a:hover {
     z-index: 1;
 }
 
-/* Individual List Items */
 .pricing-item ul li {
     margin-bottom: 10px;
     position: relative;
@@ -767,7 +892,6 @@ header nav ul li a:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Checkmark Before List Items */
 .pricing-item ul li::before {
     content: '✔';
     position: absolute;
@@ -777,7 +901,6 @@ header nav ul li a:hover {
     font-size: 1em;
 }
 
-/* Hover Effects for Pricing Item Box */
 .pricing-item:hover {
     transform: translateY(-15px) scale(1.05);
     box-shadow: var(--box-shadow-hover);
@@ -786,6 +909,14 @@ header nav ul li a:hover {
 
 /* Responsive Adjustments for Tablets */
 @media (max-width: 768px) {
+    .pricing {
+        padding: 80px 30px;
+    }
+
+    .pricing-grid {
+        gap: 20px;
+    }
+
     .pricing-item {
         padding: 35px 20px;
     }
@@ -800,8 +931,15 @@ header nav ul li a:hover {
     }
 }
 
-/* Responsive Adjustments for Mobile Devices */
 @media (max-width: 480px) {
+    .pricing {
+        padding: 60px 20px;
+    }
+
+    .pricing-grid {
+        gap: 15px;
+    }
+
     .pricing-item {
         padding: 30px 15px;
     }
@@ -816,11 +954,9 @@ header nav ul li a:hover {
     }
 }
 
-
 /* =========================
-   Pricing Calculator Section
+    9. Pricing Calculator Section
 ========================= */
-
 /* Container for the Pricing Calculator Section */
 .pricing-calculator-section {
     background-color: var(--white); /* White background */
@@ -946,6 +1082,576 @@ header nav ul li a:hover {
     text-align: left; /* Align text to the left */
 }
 
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+    .pricing-calculator-section {
+        padding: 60px 30px;
+    }
+
+    .pricing-calculator-section h3 {
+        font-size: 2.2em;
+    }
+
+    .calculator-form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calculator-form-group label {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .calculator-form-group input[type="number"] {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .calculator-result {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-calculator-section {
+        padding: 40px 20px;
+    }
+
+    .pricing-calculator-section h3 {
+        font-size: 1.8em;
+    }
+
+    .calculator-form-group {
+        padding: 10px 15px;
+    }
+
+    .calculator-form-group label {
+        font-size: 0.95em;
+    }
+
+    .calculator-form-group input[type="number"] {
+        width: 100%;
+    }
+
+    .calculator-result p {
+        font-size: 1.3em;
+    }
+
+    .pricing-calculator-section .pricing-disclaimer {
+        font-size: 0.75em; /* Further reduced for smaller screens */
+    }
+}
+
+/* =========================
+   9. Testimonials Section
+========================= */
+#testimonials {
+    background-color: var(--white);
+    padding: 100px 50px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    font-family: var(--font-secondary);
+}
+
+.swiper-container.testimonials-swiper {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial {
+    background-color: var(--light-gray);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    font-size: 1em;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Swiper.js Navigation Buttons Customization for Testimonials */
+.testimonials-swiper .swiper-button-next,
+.testimonials-swiper .swiper-button-prev {
+    color: var(--primary-color);
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+    background: var(--primary-color);
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+    background: var(--secondary-color);
+}
+
+/* Responsive Testimonials Section */
+@media (max-width: 1024px) {
+    #testimonials {
+        padding: 80px 30px;
+    }
+
+    .testimonial {
+        padding: 25px 15px;
+    }
+
+    .testimonial p {
+        font-size: 1em;
+    }
+
+    .testimonial h4 {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    #testimonials {
+        padding: 60px 20px;
+    }
+
+    .testimonial {
+        padding: 20px 10px;
+    }
+
+    .testimonial p {
+        font-size: 0.95em;
+    }
+
+    .testimonial h4 {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    #testimonials {
+        padding: 40px 15px;
+    }
+
+    .testimonial {
+        padding: 15px 8px;
+    }
+
+    .testimonial p {
+        font-size: 0.9em;
+    }
+
+    .testimonial h4 {
+        font-size: 0.8em;
+    }
+}
+
+/* =========================
+   10. Contact Section
+========================= */
+#contact {
+    background-color: var(--dark-gray);
+    padding: 100px 50px;
+    color: var(--white);
+}
+
+#contact h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: var(--white);
+    font-family: var(--font-secondary);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-details {
+    background-color: var(--secondary-color);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.contact-details::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+    z-index: 0;
+    transition: transform var(--transition-speed);
+}
+
+.contact-details:hover::before {
+    transform: rotate(0deg);
+}
+
+.contact-details:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.contact-details h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--white);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-details p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--light-gray);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-details .social-media {
+    margin-top: 20px;
+}
+
+.contact-details .social-media a {
+    font-size: 2em;
+    margin-right: 20px;
+    color: var(--white);
+    transition: color var(--transition-speed), transform var(--transition-speed);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-details .social-media a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.contact-form h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+.contact-form form button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.contact-form form button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Responsive Contact Section */
+@media (max-width: 1024px) {
+    #contact {
+        padding: 80px 30px;
+    }
+
+    .contact-grid {
+        gap: 30px;
+    }
+
+    .contact-details h3 {
+        font-size: 1.8em;
+    }
+
+    .contact-details p {
+        font-size: 1em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.8em;
+        margin-right: 15px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.8em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.95em;
+        padding: 10px 12px;
+    }
+
+    .contact-form form button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 60px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details h3 {
+        font-size: 1.6em;
+    }
+
+    .contact-details p {
+        font-size: 0.95em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.6em;
+        margin-right: 10px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.6em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    .contact-form form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 40px 15px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details h3 {
+        font-size: 1.4em;
+    }
+
+    .contact-details p {
+        font-size: 0.85em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.4em;
+        margin-right: 8px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.4em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.85em;
+        padding: 6px 8px;
+    }
+
+    .contact-form form button {
+        font-size: 0.95em;
+        padding: 8px;
+    }
+}
+
+/* =========================
+   10. Pricing Calculator Section
+========================= */
+/* Container for the Pricing Calculator Section */
+.pricing-calculator-section {
+    background-color: var(--white); /* White background */
+    padding: 80px 40px;
+    max-width: 800px;
+    margin: 0 auto 80px auto; /* Centered with bottom margin */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Section Heading */
+.pricing-calculator-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    font-family: var(--font-secondary);
+    text-align: center;
+    position: relative;
+}
+
+/* Underline for the Heading */
+.pricing-calculator-section h3::after {
+    content: '';
+    width: 70px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Pricing Form */
+#pricing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Group */
+.calculator-form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-form-group:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Labels */
+.calculator-form-group label {
+    font-size: 1em;
+    color: var(--dark-gray);
+    flex: 1 1 70%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Checkbox Inputs */
+.calculator-form-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Number Input */
+.calculator-form-group input[type="number"] {
+    width: 70px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1em;
+    text-align: center;
+}
+
+.calculator-form-group input[type="number"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Calculator Result */
+.calculator-result {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-result p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* Hover Effects for Calculator Section */
+.pricing-calculator-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff; /* Maintains white background on hover */
+}
+
+/* Specific Styling for Pricing Disclaimer in Pricing Calculator Section */
+.pricing-calculator-section .pricing-disclaimer {
+    font-size: 1em !important; /* Smaller font size with !important */
+    color: #555555 !important; /* Grey color with !important */
+    font-weight: normal !important; /* Not bolded with !important */
+    font-style: italic; /* Optional: Keep italicized for differentiation */
+    margin-top: 5px; /* Space above the disclaimer */
+    text-align: left; /* Align text to the left */
+}
 
 /* Responsive Adjustments for Tablets */
 @media (max-width: 768px) {
@@ -977,7 +1683,6 @@ header nav ul li a:hover {
     }
 }
 
-/* Responsive Adjustments for Mobile Devices */
 @media (max-width: 480px) {
     .pricing-calculator-section {
         padding: 40px 20px;
@@ -1003,12 +1708,10 @@ header nav ul li a:hover {
         font-size: 1.3em;
     }
 
-    .pricing-disclaimer {
+    .pricing-calculator-section .pricing-disclaimer {
         font-size: 0.75em; /* Further reduced for smaller screens */
     }
 }
-
-
 
 /* =========================
    11. Testimonials Section
@@ -1070,6 +1773,61 @@ header nav ul li a:hover {
 
 .testimonials-swiper .swiper-pagination-bullet-active {
     background: var(--secondary-color);
+}
+
+/* Responsive Testimonials Section */
+@media (max-width: 1024px) {
+    #testimonials {
+        padding: 80px 30px;
+    }
+
+    .testimonial {
+        padding: 25px 15px;
+    }
+
+    .testimonial p {
+        font-size: 1em;
+    }
+
+    .testimonial h4 {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    #testimonials {
+        padding: 60px 20px;
+    }
+
+    .testimonial {
+        padding: 20px 10px;
+    }
+
+    .testimonial p {
+        font-size: 0.95em;
+    }
+
+    .testimonial h4 {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    #testimonials {
+        padding: 40px 15px;
+    }
+
+    .testimonial {
+        padding: 15px 8px;
+    }
+
+    .testimonial p {
+        font-size: 0.9em;
+    }
+
+    .testimonial h4 {
+        font-size: 0.8em;
+    }
 }
 
 /* =========================
@@ -1223,6 +1981,121 @@ header nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+/* Responsive Contact Section */
+@media (max-width: 1024px) {
+    #contact {
+        padding: 80px 30px;
+    }
+
+    .contact-grid {
+        gap: 30px;
+    }
+
+    .contact-details h3 {
+        font-size: 1.8em;
+    }
+
+    .contact-details p {
+        font-size: 1em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.8em;
+        margin-right: 15px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.8em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.95em;
+        padding: 10px 12px;
+    }
+
+    .contact-form form button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 60px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details h3 {
+        font-size: 1.6em;
+    }
+
+    .contact-details p {
+        font-size: 0.95em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.6em;
+        margin-right: 10px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.6em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    .contact-form form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 40px 15px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details h3 {
+        font-size: 1.4em;
+    }
+
+    .contact-details p {
+        font-size: 0.85em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.4em;
+        margin-right: 8px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.4em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.85em;
+        padding: 6px 8px;
+    }
+
+    .contact-form form button {
+        font-size: 0.95em;
+        padding: 8px;
+    }
+}
+
 /* =========================
    13. Footer
 ========================= */
@@ -1238,6 +2111,21 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 25px 15px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 20px 10px;
+        font-size: 0.9em;
+    }
 }
 
 /* =========================
@@ -1293,10 +2181,31 @@ footer p {
     background: var(--secondary-color);
 }
 
+/* Responsive Swiper.js Navigation */
+@media (max-width: 768px) {
+    .testimonials-swiper .swiper-button-next,
+    .testimonials-swiper .swiper-button-prev {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-swiper .swiper-button-next,
+    .testimonials-swiper .swiper-button-prev {
+        font-size: 1em;
+        padding: 6px;
+    }
+
+    .testimonials-swiper .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+}
+
 /* =========================
    16. Before and After Slider Styles
 ========================= */
-
 /* Container for Before and After Slider */
 .before-after-slider {
     position: relative;
@@ -1342,7 +2251,6 @@ footer p {
     object-fit: cover;
 }
 
-/* Slider Handle */
 .slider-handle {
     position: absolute;
     top: 0;
@@ -1378,6 +2286,12 @@ footer p {
 }
 
 /* Responsive Before/After Slider */
+@media (max-width: 1024px) {
+    .before-after-slider {
+        height: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     .before-after-slider {
         height: 300px;
@@ -1390,6 +2304,21 @@ footer p {
 
     .slider-handle {
         width: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .before-after-slider {
+        height: 200px;
+    }
+
+    .slider-handle::before {
+        width: 24px;
+        height: 24px;
+    }
+
+    .slider-handle {
+        width: 4px;
     }
 }
 
@@ -1410,7 +2339,6 @@ footer p {
 /* =========================
    18. FAQ Section Styles
 ========================= */
-
 /* FAQ Section */
 #faq {
     background-color: var(--light-gray);
@@ -1497,24 +2425,63 @@ footer p {
     text-decoration: underline;
 }
 
+@media (max-width: 1024px) {
+    #faq {
+        padding: 80px 30px;
+    }
+
+    #faq h2 {
+        font-size: 2.5em;
+    }
+
+    .faq-container {
+        padding: 0 10px;
+    }
+}
+
 @media (max-width: 768px) {
     #faq {
-        padding: 80px 20px;
+        padding: 60px 20px;
+    }
+
+    #faq h2 {
+        font-size: 2.2em;
     }
 
     .faq-question {
         font-size: 1em;
+        padding: 12px;
+    }
+
+    .faq-answer p {
+        padding: 12px 0;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    #faq {
+        padding: 40px 15px;
     }
 
     #faq h2 {
         font-size: 2em;
+    }
+
+    .faq-question {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+
+    .faq-answer p {
+        padding: 10px 0;
+        font-size: 0.9em;
     }
 }
 
 /* =========================
    19. Service Recommendation Quiz Styles
 ========================= */
-
 /* Quiz Section */
 #service-quiz {
     background-color: var(--white);
@@ -1611,18 +2578,36 @@ footer p {
     font-style: italic;
 }
 
-/* Responsive Design */
+/* Responsive Quiz Section */
+@media (max-width: 1024px) {
+    #service-quiz {
+        padding: 70px 15px;
+    }
+
+    #service-quiz h2 {
+        font-size: 2.3em;
+    }
+
+    .quiz-container {
+        padding: 0 10px;
+    }
+}
+
 @media (max-width: 768px) {
     #service-quiz {
         padding: 60px 10px;
     }
 
     #service-quiz h2 {
-        font-size: 2em;
+        font-size: 2.1em;
     }
 
     .quiz-container {
-        width: 100%;
+        padding: 0 5px;
+    }
+
+    .quiz-question p {
+        font-size: 1.1em;
     }
 
     .quiz-submit {
@@ -1631,10 +2616,48 @@ footer p {
     }
 }
 
+@media (max-width: 480px) {
+    #service-quiz {
+        padding: 40px 5px;
+    }
+
+    #service-quiz h2 {
+        font-size: 1.8em;
+    }
+
+    .quiz-container {
+        width: 100%;
+    }
+
+    .quiz-question p {
+        font-size: 1em;
+    }
+
+    .quiz-submit {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .quiz-result h3 {
+        font-size: 1.5em;
+    }
+
+    .quiz-result p {
+        font-size: 0.9em;
+    }
+
+    .quiz-result ul {
+        padding-left: 15px;
+    }
+
+    .quiz-result .pricing-disclaimer {
+        font-size: 0.8em;
+    }
+}
+
 /* =========================
    20. Pricing Disclaimer Styles
 ========================= */
-
 /* Disclaimer Text */
 .pricing-disclaimer {
     font-size: 0.9em; /* Slightly smaller font size */
@@ -1644,8 +2667,42 @@ footer p {
     text-align: left; /* Align text to the left */
 }
 
+/* Responsive Disclaimer */
+@media (max-width: 768px) {
+    .pricing-disclaimer {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-disclaimer {
+        font-size: 0.75em;
+    }
+}
+
 /* =========================
    21. Additional Styles
 ========================= */
-
 /* You can add any additional styles here */
+
+/* Ensure all sections have proper padding and margins on smaller devices */
+@media (max-width: 480px) {
+    .hero,
+    .about-content,
+    .features,
+    .slider,
+    .pricing-grid,
+    .contact-grid,
+    .faq-container,
+    .quiz-container,
+    .pricing-calculator-section {
+        padding: 0 15px;
+    }
+
+    .contact-form,
+    .contact-details,
+    .pricing-item,
+    .feature {
+        padding: 20px;
+    }
+}
