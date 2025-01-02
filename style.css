@@ -107,24 +107,77 @@ header nav ul li a:hover {
     color: var(--primary-color);
 }
 
-/* Responsive Header */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
+/* =========================
+   Responsive Header
+========================= */
 
-    header nav ul {
-        gap: 15px;
+/* Tablet and Small Desktops */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 40px;
     }
 
     header .logo {
         font-size: 2em;
     }
 
+    header nav ul {
+        gap: 20px;
+    }
+
     header nav ul li a {
         font-size: 1em;
     }
 }
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header .logo {
+        font-size: 1.8em;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 0.95em;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    header .logo {
+        font-size: 1.6em;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9em;
+    }
+}
+
 
 /* =========================
    4. Hero Section
@@ -226,27 +279,14 @@ header nav ul li a:hover {
     box-shadow: var(--box-shadow-hover);
 }
 
-/* Responsive Hero */
+/* =========================
+   Responsive Hero Section
+========================= */
+
+/* Tablet and Small Desktops */
 @media (max-width: 1024px) {
     .hero {
         padding: 120px 30px 80px;
-    }
-
-    .hero-text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-image {
-        max-width: 100%;
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 100px 20px 60px;
     }
 
     .hero-text h1 {
@@ -261,7 +301,75 @@ header nav ul li a:hover {
         font-size: 1em;
         padding: 12px 25px;
     }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 30px;
+    }
 }
+
+/* Tablets */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 100px 20px 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero .cta {
+        font-size: 0.95em;
+        padding: 10px 20px;
+    }
+
+    .book-now-btn {
+        padding: 10px 20px;
+        font-size: 0.95em;
+        margin-left: 10px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 15px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-text p {
+        font-size: 0.95em;
+    }
+
+    .hero .cta {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .book-now-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        margin-left: 5px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+}
+
 
 /* =========================
    5. About Us Section
@@ -1222,6 +1330,129 @@ header nav ul li a:hover {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
 }
+
+/* =========================
+   Responsive Contact Section
+========================= */
+
+/* Tablet and Small Desktops */
+@media (max-width: 1024px) {
+    #contact {
+        padding: 80px 30px;
+    }
+
+    .contact-grid {
+        gap: 30px;
+    }
+
+    .contact-details h3 {
+        font-size: 1.8em;
+    }
+
+    .contact-details p {
+        font-size: 1em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.8em;
+        margin-right: 15px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.8em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.95em;
+        padding: 10px 12px;
+    }
+
+    .contact-form form button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    #contact {
+        padding: 60px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details h3 {
+        font-size: 1.6em;
+    }
+
+    .contact-details p {
+        font-size: 0.95em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.6em;
+        margin-right: 10px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.6em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    .contact-form form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    #contact {
+        padding: 40px 15px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details h3 {
+        font-size: 1.4em;
+    }
+
+    .contact-details p {
+        font-size: 0.85em;
+    }
+
+    .contact-details .social-media a {
+        font-size: 1.4em;
+        margin-right: 8px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.4em;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        font-size: 0.85em;
+        padding: 6px 8px;
+    }
+
+    .contact-form form button {
+        font-size: 0.95em;
+        padding: 8px;
+    }
+}
+
+
 
 /* =========================
    13. Footer
