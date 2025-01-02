@@ -107,22 +107,18 @@ header nav ul li a:hover {
     color: var(--primary-color);
 }
 
-/* =========================
-   Responsive Header
-========================= */
-
-/* Tablet and Small Desktops */
-@media (max-width: 1024px) {
+/* Responsive Header */
+@media (max-width: 768px) {
     header {
-        padding: 15px 40px;
+        padding: 15px 20px;
+    }
+
+    header nav ul {
+        gap: 15px;
     }
 
     header .logo {
         font-size: 2em;
-    }
-
-    header nav ul {
-        gap: 20px;
     }
 
     header nav ul li a {
@@ -130,51 +126,63 @@ header nav ul li a:hover {
     }
 }
 
-/* Tablets */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-
-    header .logo {
-        font-size: 1.8em;
-    }
-
-    header nav ul {
-        gap: 15px;
-    }
-
-    header nav ul li a {
-        font-size: 0.95em;
-    }
+/* Mobile Navigation Menu - Hidden by Default */
+header nav ul.mobile-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    padding: 10px 0;
 }
 
-/* Mobile Devices */
+header nav ul.mobile-nav.active {
+    display: flex;
+}
+
+header nav ul.mobile-nav li {
+    text-align: center;
+    padding: 10px 0;
+}
+
+header nav ul.mobile-nav li a {
+    font-size: 1em;
+    color: var(--white);
+}
+
+/* =========================
+   Responsive Header for Mobile Devices
+========================= */
+
 @media (max-width: 480px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 10px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    header nav ul li {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 10px;
+        flex-direction: row; /* Keep it horizontal */
+        padding: 10px 20px; /* Reduce padding */
     }
 
     header .logo {
-        font-size: 1.6em;
-        margin-bottom: 10px;
+        font-size: 1.8em; /* Reduce logo size */
     }
 
-    header nav ul li a {
-        font-size: 0.9em;
+    /* Hide the regular navigation links */
+    header nav ul.desktop-nav {
+        display: none;
+    }
+
+    /* Show the hamburger menu */
+    header .menu-toggle {
+        display: block;
+    }
+
+    /* Mobile Navigation Menu Adjustments */
+    header nav ul.mobile-nav {
+        top: 50px; /* Adjust based on new header height */
+    }
+
+    header nav ul.mobile-nav li a {
+        font-size: 0.95em;
     }
 }
 
@@ -279,14 +287,27 @@ header nav ul li a:hover {
     box-shadow: var(--box-shadow-hover);
 }
 
-/* =========================
-   Responsive Hero Section
-========================= */
-
-/* Tablet and Small Desktops */
+/* Responsive Hero */
 @media (max-width: 1024px) {
     .hero {
         padding: 120px 30px 80px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 100px 20px 60px;
     }
 
     .hero-text h1 {
@@ -301,75 +322,7 @@ header nav ul li a:hover {
         font-size: 1em;
         padding: 12px 25px;
     }
-
-    .hero-image {
-        max-width: 100%;
-        margin-top: 30px;
-    }
 }
-
-/* Tablets */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 100px 20px 60px;
-    }
-
-    .hero-text h1 {
-        font-size: 2em;
-    }
-
-    .hero-text p {
-        font-size: 1em;
-    }
-
-    .hero .cta {
-        font-size: 0.95em;
-        padding: 10px 20px;
-    }
-
-    .book-now-btn {
-        padding: 10px 20px;
-        font-size: 0.95em;
-        margin-left: 10px;
-    }
-
-    .hero-image {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-}
-
-/* Mobile Devices */
-@media (max-width: 480px) {
-    .hero {
-        padding: 80px 15px 40px;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8em;
-    }
-
-    .hero-text p {
-        font-size: 0.95em;
-    }
-
-    .hero .cta {
-        font-size: 0.9em;
-        padding: 8px 15px;
-    }
-
-    .book-now-btn {
-        padding: 8px 15px;
-        font-size: 0.9em;
-        margin-left: 5px;
-    }
-
-    .hero-image img {
-        width: 100%;
-    }
-}
-
 
 /* =========================
    5. About Us Section
@@ -1451,7 +1404,6 @@ header nav ul li a:hover {
         padding: 8px;
     }
 }
-
 
 
 /* =========================
